@@ -1,0 +1,10 @@
+﻿@model Card
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Areas/Admin/Views/shared/_AdminLayout.cshtml";
+}
+
+<h2>ID:@Model.Id</h2>
+<h4>Desc:-@Model.CardDesc</h4>
+<a class="btn btn-dark" asp-controller="Card" asp-action="Index">Back</a>
+

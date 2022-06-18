@@ -1,0 +1,156 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Main start -->
+    <main>
+      <section id="intro-slider">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active slider-area">
+                <img src="~/img/@Model.sliders.BackImageUrl" class="d-block w-100 slider-img" alt="...">
+                <div class="mobile-screen">
+                    
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+</div>
+            </div>
+            <div class="col-6 slider-mobile">
+             <img src="~/img/@Model.sliders.ImageUrl" alt="">
+            </div>
+            <div class="col-6 slider-text ">
+                <div class="download-app d-flex">
+                    <!-- <div class="yanyanadush"></div>
+                <div class="slider-icon">
+                    <i class="fa-solid fa-mobile-screen-button download-icon"></i>
+                </div> -->
+                <!-- <div class="slider-content">
+
+                    <div class="slider-title">
+                        <span class="slider-title-main">Responsive App <br> <span class="app-desc">Landing Page</span> </span>
+                    </div>
+                  <div class="slider-desc">
+                      <span class="slider-sub-title">Bootstrap Based Responsive Landing Page <br> Template.</span>
+    
+                  </div>
+                </div> -->
+                </div>
+            </div>
+         
+            </div>
+          </div>
+      </section>
+    </main>
+    <!-- Main end -->
+
+    <section id="page-cards">
+        <div class="container">
+            <div class="row">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    @foreach (var item in Model.cards)
+                    {
+                    <div class="col">
+                      <div class="card h-100 text-center">
+                       @Html.Raw(item.CardIcon)
+                        <div class="card-body">
+                          <h5 class="card-title">@item.CardTitle</h5>
+                          <p class="card-text">@item.CardDesc</p>
+                        </div>
+                       
+                      </div>
+                    </div>
+                        
+                    }
+                       
+            </div>
+        </div>
+    </section>
+    <section id="modern ">
+        
+            <div class="container">
+                <div class="row">
+                    <div class="section-title text-center mt-5" >
+                        <h3 class="modern-title">Modern & clean landing page theme</h3>
+                        <p class="modern-subtitle">Lorem ipsum dolizzle sit tellivizzle, boom shackalack adipiscing elit. Nullam mofo velizzle, sure cool.</p>
+                    </div>
+                </div>
+            <div class="modern-content d-flex   ">
+                <div class="col-6 image-container">
+                    <img src="~/img/tablet.png" alt="">
+                </div>
+                <div class="col-6 modern-context">
+                    @foreach (var item in Model.modernCard)
+                   {
+                    <div class="card mb-3 modern-cards" style="max-width: 540px;">
+                        <div class="row g-0">
+                          <div class="col-1">
+                            @Html.Raw(item.ModernIcon)
+                          </div>
+                          <div class="col-md-8">
+                            <div class="card-body">
+                              <h5 class="modern-card-title">@item.ModernTitle</h5>
+                              <p class="card-text modern-text">@item.ModernDesc</p>
+                             
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                       
+                   }
+                     
+                      
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <section id="footer-slider">
+        <div class="container">
+            <div class="row">
+                <p class="text-center mt-5" style="color: #428BCA;font-size: 3rem; font-weight: 700;">What people say</p>
+              <div id="slider">
+                <ul>
+                  <li>
+                  <div class="slider-container">
+                    <p>“Went with my wife, absolutely brilliant restaurant, the food tasted beautiful, so much depth and very well presented. As good if not better than any in the city centre. Will definitely be returning.” <br> Nathaniel Harwood – Google</p>
+                  </div>
+                  </li>
+                  
+                  
+                    <li>
+                    <div class="slider-container">
+                    <p>“Great friendly service, the staff don't make you feel rushed, but are also very attentive, and on hand all the time if needed, best Thai food I have had in years, flavours are out of this world, and extremely good prices for the quality you get is top notch!!!!!! Love it” <br>David Armstrong - Porter – Google</p>
+                  </div>
+                  </li>
+                    <li>
+                    <div class="slider-container">
+                    <p>“Possibly one of the best in Manchester. A menu designed and prepared by a very skilled chef, ably assisted by his wife who provides a friendly welcome. Always consistent and of high quality.” <br>Paul Fletcher – Google</p>
+                  </div>
+                  </li>
+                    <li>
+                    <div class="slider-container">
+                    <p>“Food was amazing and service could not have been better...we went for a quick lunch as our office is opposite the restaurant...very quick service...I am highly recommending this restaurant to all my family and friends...” <br>Nic Gent – Facebook Page</p>
+                  </div>
+                  </li>
+                   <li>
+                    <div class="slider-container">
+                    <p>“Went for the first time last night for my Husbands Birthday, friendly staff, very tasty food, would highly recommend, we will be back.” <br>Joanne Simms – Facebook Page</p>
+                  </div>
+                  </li>
+                   <li>
+                    <div class="slider-container">
+                    <p>“A lovely, well decorated restaurant, where great food is served by very friendly staff for a bargain price. The food is authentic and delicious. We'll definitely be returning.”<br>Joe H – Trip Advisor</p>
+                  </div>
+                  </li>
+                </ul>
+                </div>
+                   
+                    
+                    
+            </div>
+        </div>
+    </section>
+
